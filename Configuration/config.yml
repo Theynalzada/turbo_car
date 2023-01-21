@@ -1,0 +1,191 @@
+base_url:
+  https://turbo.az
+
+target_url:
+  https://turbo.az/autos?utf8=✓&q%5Bsort%5D=&q%5Bmake%5D%5B%5D=&q%5Bmodel%5D%5B%5D=&q%5Bused%5D=&q%5Bregion%5D%5B%5D=&q%5Bregion%5D%5B%5D=1&q%5Bprice_from%5D=&q%5Bprice_to%5D=&q%5Bcurrency%5D=azn&q%5Bloan%5D=0&q%5Bbarter%5D=0&q%5Bcategory%5D%5B%5D=&q%5Bcategory%5D%5B%5D=2&q%5Bcategory%5D%5B%5D=11&q%5Bcategory%5D%5B%5D=3&q%5Bcategory%5D%5B%5D=28&q%5Bcategory%5D%5B%5D=21&q%5Bcategory%5D%5B%5D=6&q%5Bcategory%5D%5B%5D=8&q%5Bcategory%5D%5B%5D=1&q%5Bcategory%5D%5B%5D=4&q%5Byear_from%5D=&q%5Byear_to%5D=&q%5Bcolor%5D%5B%5D=&q%5Bfuel_type%5D%5B%5D=&q%5Bgear%5D%5B%5D=&q%5Btransmission%5D%5B%5D=&q%5Bengine_volume_from%5D=&q%5Bengine_volume_to%5D=&q%5Bpower_from%5D=&q%5Bpower_to%5D=&q%5Bmileage_from%5D=&q%5Bmileage_to%5D=&q%5Bonly_shops%5D=&q%5Bprior_owners_count%5D%5B%5D=&q%5Bseats_count%5D%5B%5D=&q%5Bcrashed%5D=1&q%5Bpainted%5D=1&q%5Bmarket%5D%5B%5D=
+  
+target_path:
+  ../Data/Converted Data/input_data.parquet.brotli
+  
+metric:
+  mse
+  
+target:
+  price
+  
+currency_exchange:
+- 1.7
+- 1.81
+
+features:
+ binary_features:
+  - is_new
+  - is_luxury_brand
+  - exchange_available
+  - is_saloon_car
+  - loan_available
+  - is_overdriven
+  - has_alloy_wheels
+  - has_abs
+  - has_hatch
+  - has_rain_sensor
+  - has_central_locking
+  - has_parking_radar
+  - has_air_conditioner
+  - has_seat_heating
+  - has_leather_salon
+  - has_xenon_lamps
+  - has_rear_view_camera
+  - has_side_curtains
+  - has_seat_ventilation
+
+ nominal_features:
+  - vehicle_type
+  - brand
+  - origin
+  - color
+  - fuel_type
+  - speed_box
+  - transmission
+
+ numeric_features:
+  - age
+  - engine
+  - mileage
+  - hp
+  - avg_mileage_per_year
+
+ high_cardinality_features:
+  - model
+
+origin:
+ chinese:
+  - Bestune 
+  - Chery 
+  - Geely 
+  - Haima 
+  - Lifan 
+  - Changan 
+  - Zeekr 
+  - Haval 
+  - Hongqi 
+  - Great Wall 
+  - Skywell 
+  - DongFeng 
+  - BYD 
+  - Soueast 
+  - ZX Auto 
+  - KAIYI 
+  - Baic 
+  - JAC 
+  - GAC 
+  - Foton
+  
+ us:
+  - Chevrolet 
+  - Ford 
+  - Jeep 
+  - Lincoln 
+  - Dodge 
+  - Cadillac 
+  - GMC 
+  - Tesla 
+  - Hummer 
+  - Chrysler 
+  - Buick
+  
+ japanese:
+  - Honda 
+  - Toyota 
+  - Infiniti 
+  - Lexus 
+  - Nissan 
+  - Subaru 
+  - Mitsubishi 
+  - Mazda 
+  - Suzuki 
+  - Isuzu
+  
+ english:
+  - Land Rover 
+  - Mini 
+  - Jaguar 
+  - Bentley 
+  - MG 
+  - Aston Martin
+  - Rolls-Royce 
+  - McLaren
+ 
+ german:
+  - Volkswagen 
+  - BMW 
+  - Opel 
+  - Mercedes 
+  - Audi
+  - Porsche 
+  - Mercedes-Maybach
+ 
+ korean:
+  - Hyundai 
+  - Daewoo 
+  - Genesis 
+  - Ssang Yong
+  
+ italian:
+  - Alfa Romeo 
+  - Lamborghini 
+  - Maserati 
+  - Fiat
+  
+ russian:
+  - LADA (VAZ) 
+  - GAZ 
+  - Moskvich 
+  - UAZ
+  
+ french:
+  - Peugeot
+  - Renault
+  - Citroen
+  
+ swedish:
+  - Volvo 
+  - Polestar
+  
+ persian:
+  - Iran Khodro 
+  - Saipa
+  
+ local:
+  - Khazar
+  
+ turkish:
+  - Tofas
+  
+ swiss:
+  - Smart
+  
+ czech:
+  - Skoda
+  
+ uzbek:
+  - Ravon
+  
+ spanish:
+  - SEAT
+  
+ ukranian:
+  - ZAZ
+  
+ romanian:
+  - Dacia
+  
+luxury_brands:
+- Porsche
+- Bentley 
+- Lamborghini 
+- Mercedes-Maybach 
+- Maserati 
+- Aston Martin 
+- Rolls-Royce 
+- McLaren
